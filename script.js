@@ -3,7 +3,7 @@ let slider = document.querySelector('#slider')
 let upperbox = document.querySelector('#upper')
 let lowerbox = document.querySelector('#lower')
 let symbolbox = document.querySelector('#symbols')
-let numberbox = document.querySelector('#numbers')
+let numberbox = document.querySelector('#number')
 let button = document.querySelector('.button')
 let password = ""
 let symbols = '~`!@#$%^&*()_-+={[}]|:;"<,>.?/'
@@ -11,7 +11,10 @@ let length = 8
 let count =0
 let result = document.querySelector('.result')
 let copy = document.querySelector('#copy')
-
+let upperLabel =  document.querySelector('.upper-label')
+let lowerLabel =  document.querySelector('.lower-label')
+let symbolLabel =  document.querySelector('.symbol-label')
+let numberLabel =  document.querySelector('.number-label')
 
 slider.addEventListener('input',(e)=>{
     
@@ -20,8 +23,46 @@ slider.addEventListener('input',(e)=>{
 
 })
 
+upperLabel.addEventListener('click',()=>{
+    if(upperbox.checked){
+        upperbox.checked = false
+    }
+    else{
+        upperbox.checked = true
+    }
+})
+
+lowerLabel.addEventListener('click',()=>{
+    if(lowerbox.checked){
+        lowerbox.checked = false
+    }
+    else{
+        lowerbox.checked = true
+    }
+})
+
+symbolLabel.addEventListener('click',()=>{
+    if(symbolbox.checked){
+        symbolbox.checked = false
+    }
+    else{
+        symbolbox.checked = true
+    }
+})
+
+numberLabel.addEventListener('click',()=>{
+    if(numberbox.checked==true){
+        numberbox.checked = false
+    }
+
+    else{
+        numberbox.checked = true
+    }
+})
+
 upperbox.addEventListener('change',()=>{
     console.log(upperbox.checked)
+    
 })
 lowerbox.addEventListener('change',()=>{
     console.log(lowerbox.checked)
