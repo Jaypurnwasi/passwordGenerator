@@ -1,0 +1,214 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+  
+    --vb-yellow: hsl(52, 100%, 62%);
+  
+  
+    --pl-white: hsl(0, 0%, 100%);
+  
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+    --dk-text: hsl(198, 20%, 13%);
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background-image: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%, rgba(52, 28, 79, 1) 50%, rgba(88, 7, 125, 1) 100%); 
+    /* background-size: 100% 100%;    */
+    background-size: cover;
+    /* background-image: url(./assets/); 
+    */
+    /* background-color: rgb(184, 74, 125); */
+}
+.container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* z-index:; */
+    color: rgba(225, 222, 222, 0.9);
+    width: 450px;
+    /* border: 3px solid red; */
+    
+}
+/* background-color: rgb(35, 16, 57); */
+.container h1{
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.833);
+    /* letter-spacing: 3px; */
+    margin-top: 2rem;
+    text-align: center;
+}
+.display-container{
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    height: 4rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background-color: rgb(35, 16, 57) ;
+    border-bottom: 5px solid rgb(164, 10, 164);
+    /* -webkit-appearance: none;     */
+    position: relative;
+}
+.display-container input {   
+    /* appearance: none; */
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: hsla(52, 100%, 62%, 0.89);
+    
+
+}
+
+
+.display-container input::placeholder{
+    color: rgba(255, 229, 61, 0.648);
+}
+.display-container i{
+    color: aqua;
+}
+
+.input-container{
+
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: rgb(35, 16, 57);
+    border-radius: 12px;
+    border-bottom: 5px solid rgb(164, 10, 164);
+    /* box-shadow: 0px 0px 2px 0px  white; */
+
+}
+
+.password-l{
+    display: flex;
+    justify-content:space-between ;
+    font-size: 1.3rem;
+    color: white;
+}
+.password-l div{
+
+    color: rgba(255, 229, 61);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.slider{
+    appearance: none;
+    width:100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: var(--lt-violet);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(var(--vb-violet), var(--vb-violet));
+    background-repeat: no-repeat;
+    border:none;
+    outline:none;
+    z-index:10;
+}
+
+.slider::-webkit-slider-thumb {
+    position:relative;
+    z-index:1;
+    appearance: none;
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color: var(--vb-yellow);
+    cursor:pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid var(--vb-yellow);
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+}
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.checkbox input{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 1px solid cyan;
+    /* outline: 2px solid cyan; */
+    /* background-color: grey; */
+    border-radius: 4px;
+
+}
+.checkbox input:checked{
+    background-color: rgb(48, 199, 48);
+}
+.checkbox label{
+    font-size: 1.2rem;
+}
+
+#copy{
+    cursor: pointer;
+}
+.button{
+    outline: none;
+
+    height: 3rem;
+    color: rgba(255, 229, 61, 0.909);
+    font-weight: 700;
+    font-size: 1.1rem;
+    background-color: rgb(187, 31, 187);
+    border-radius: 12px;
+    border-bottom: 5px solid rgba(255, 229, 61  ) ;
+
+}
+
+.copied{
+    font-size: 1.1rem;
+    border-radius: 12px;
+    color: rgba(255, 229, 61, 0.89);
+    width: 60px;
+    margin: 0 10px;
+    position: absolute;
+    right: 0px;
+    top: -25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    scale: 0;
+    /* transition: 1s; */
+
+    /* background-color: rgba(255, 229, 61  ); */
+}
+.active{
+    scale: 1;
+}
